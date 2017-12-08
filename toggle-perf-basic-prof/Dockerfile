@@ -13,10 +13,10 @@ RUN apk add --no-cache --virtual .build-deps \
         python \
         git
 
-ARG GIT_NODE_REPO
+ARG GIT_NODE_REPO=https://github.com/mmarchini/node
 RUN test -n "$GIT_NODE_REPO"
 
-ARG NODE_BRANCH
+ARG NODE_BRANCH=v8/toggle-perf-basic-prof
 RUN test -n "$NODE_BRANCH"
 
 RUN git clone --depth 1 $GIT_NODE_REPO -b $NODE_BRANCH /opt/node
