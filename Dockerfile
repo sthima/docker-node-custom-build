@@ -17,7 +17,7 @@ RUN apk add --no-cache libstdc++ \
         python \
         git \
     && git clone --depth 1 $GIT_NODE_REPO -b $NODE_BRANCH /opt/node \
-    && /opt/node \
+    && cd /opt/node \
     && ./configure && make -j$(getconf _NPROCESSORS_ONLN) && make install \
     && apk del .build-deps \
     && cd / \
