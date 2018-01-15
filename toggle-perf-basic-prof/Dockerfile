@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 #
 ENV GIT_NODE_REPO https://github.com/mmarchini/node
-ENV NODE_BRANCH v8/toggle-perf-basic-prof
+ENV NODE_BRANCH v6.12.3-perf-basic-prof-toggling
 
 RUN apk add --no-cache libstdc++ \
     && apk add --no-cache --virtual .build-deps \
